@@ -31,11 +31,13 @@ html
 
 ## Usando Bootstrap no projeto
 
-### Selecionando cores no bootstrap
+### Documentação do Bootstrap
  - Cores → https://www.w3schools.com/bootstrap5/bootstrap_colors.php
  - Containers → https://www.w3schools.com/bootstrap5/bootstrap_containers.php
  - NavBars → https://www.w3schools.com/bootstrap5/bootstrap_navbar.php
+ - Formulários → https://www.w3schools.com/bootstrap5/bootstrap_forms.php
 
 ### Ferramentas úteis
  - Cores das marcas → https://brandcolors.net/
  - Remove fundo de imagens → https://www.remove.bg/
+
