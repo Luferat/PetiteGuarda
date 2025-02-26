@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +15,9 @@
     <!-- Componentes do Bootstrap -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-    <title>Petite Guarda</title>
+    <title>Petite Guarda - Faça contato</title>
 </head>
+
 <body>
     <div id="wrap" class="container d-flex flex-column">
         <header>
@@ -72,11 +74,43 @@
         <main class="container flex-grow-1 d-flex">
             <div class="row d-flex flex-grow-1">
                 <article class="col-12 col-md-9 flex-grow-1 p-3">
-                    <h2>Article</h2>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis temporibus odit in obcaecati
-                    eveniet minima sint reiciendis! Maxime, iure sequi eum quasi nobis, facere doloribus deserunt
-                    mollitia
-                    asperiores corporis qui?
+
+                    <h2>Faça contato</h2>
+
+                    <p>Preencha todos os campos para entrar em contato com e equipe "Petite Guarda".</p>
+
+                    <form action="processa.html" method="get" id="formContato">
+
+                        <p>
+                            <label for="campoNome">Nome:</label>
+                            <input type="text" name="nome" id="campoNome" placeholder="Seu nome completo" minlength="3"
+                                required>
+                        </p>
+
+                        <p>
+                            <label for="campoEmail">E-mail:</label>
+                            <input type="email" name="email" id="campoEmail" placeholder="Um e-mail válido" required>
+                        </p>
+
+                        <p>
+                            <label for="campoAssunto">Assunto:</label>
+                            <input type="text" name="assunto" id="campoAssunto" placeholder="Assunto do contato"
+                                minlength="5" required>
+                        </p>
+
+                        <p>
+                            <label for="campoMensagem">Mensagem:</label>
+                            <textarea name="mensagem" id="campoMensagem" placeholder="Mensagem do contato" minlength="5"
+                                required></textarea>
+                        </p>
+
+                        <p>
+                            <button type="submit">Enviar</button>
+                            <!-- small>&larr; Clique somente uma vez.</small -->
+                        </p>
+
+                    </form>
+
                 </article>
                 <aside class="col-12 col-md-3 p-3">
                     <h2>Aside</h2>
@@ -137,30 +171,31 @@
                             </a></li>
                     </ul>
                 </nav>
+
+                <!-- Modal e popup com formulário de busca -->
+                <dialog id="dialogFormBusca" class="pt-3 pb-3 rounded-2 border-0">
+                    <button id="closeDialog" class="float-end border-0 bg-transparent">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <h5>Procurar</h5>
+                    <form action="procurar.html" method="get" class="input-group">
+                        <input type="search" name="q" class="form-control">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </dialog>
+
+                <!-- Script para fechar o modal -->
+                <script>
+                    document.getElementById("closeDialog").addEventListener("click", () => {
+                        document.getElementById("dialogFormBusca").close(); // Fecha o diálogo
+                    });
+                </script>
+
             </div>
         </footer>
     </div>
-
-    <!-- Modal e popup com formulário de busca -->
-    <dialog id="dialogFormBusca" class="pt-3 pb-3 rounded-2 border-0">
-        <button id="closeDialog" class="float-end border-0 bg-transparent">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-        <h5>Procurar</h5>
-        <form action="procurar.html" method="get" class="input-group">
-            <input type="search" name="q" class="form-control">
-            <button type="submit" class="btn btn-primary">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form>
-    </dialog>
-
-    <!-- Script para fechar o modal -->
-    <script>
-        document.getElementById("closeDialog").addEventListener("click", () => {
-            document.getElementById("dialogFormBusca").close(); // Fecha o diálogo
-        });
-    </script>
-
 </body>
+
 </html>
