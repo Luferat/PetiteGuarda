@@ -97,10 +97,10 @@ main aside {
     margin: auto;
 }
 
-#formContato label {
+/* #formContato label {
     display: block;
     padding: .25rem .5rem;
-}
+} */
 
 #formContato input,
 #formContato textarea {
