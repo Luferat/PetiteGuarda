@@ -42,12 +42,12 @@ header img {
     display: block;
     width: 4rem;
     height: auto;
+    margin: .5rem;
 }
 
 header h1 {
     flex-grow: 1;
     margin: 0;
-    margin-left: 1rem;
     -webkit-text-stroke: .5px white;
 }
 
